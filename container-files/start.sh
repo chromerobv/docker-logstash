@@ -15,4 +15,4 @@ if [ ! -f /etc/logstash/ssl/logstash-forwarder.crt ] ; then
     openssl req -x509 -batch -nodes -days 3650 -newkey rsa:2048 -keyout logstash-forwarder.key -out logstash-forwarder.crt -subj /CN=$SERVER_CN
 fi
 # Start logstash
-/opt/logstash/bin/logstash agent -f /etc/logstash/logstash.conf
+/opt/logstash/bin/logstash agent --verbose -f /etc/logstash/logstash.conf
