@@ -12,10 +12,6 @@ RUN \
     yum remove -y tar && \
     yum clean all
 
-RUN curl -O https://repos.chromeriver.com/repo/sources/logstash/s3.rb 
-RUN mv s3.rb /opt/logstash/vendor/bundle/jruby/1.9/gems/logstash-output-s3-1.0.0/lib/logstash/outputs/
-
-
 ENV SERVER_CN logstash
 
 COPY container-files /
