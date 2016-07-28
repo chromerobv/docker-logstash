@@ -23,4 +23,4 @@ COPY container-files /
 
 CMD /start.sh
 
-EXPOSE 5043
+EXPOSE 5043 12201
